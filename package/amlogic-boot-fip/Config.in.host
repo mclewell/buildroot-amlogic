@@ -2,3 +2,17 @@ config BR2_PACKAGE_HOST_AMLOGIC_BOOT_FIP
 	bool "host Firmware Image Package for Amlogic"
 	help
 		Fimware Image Package (FIP) sources used to sign Amlogic U-Boot binaries
+
+if BR2_PACKAGE_HOST_AMLOGIC_BOOT_FIP
+
+config BR2_PACKAGE_HOST_AMLOGIC_BOOT_FIP_ODROIDHC4
+	bool "Odroid-HC4"
+
+config BR2_PACKAGE_HOST_AMLOGIC_BOOT_FIP_ODROIDN2
+	bool "Odroid-N2"
+
+config BR2_PACKAGE_HOST_AMLOGIC_BOOT_FIP_ODROIDN2PLUS
+	bool "Odroid-N2+"
+
+endif # BR2_PACKAGE_HOST_AMLOGIC_BOOT_FIP
+
