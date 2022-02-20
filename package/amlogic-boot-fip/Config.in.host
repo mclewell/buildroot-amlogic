@@ -1,0 +1,4 @@
+config BR2_PACKAGE_HOST_AMLOGIC_BOOT_FIP
+	bool "host Firmware Image Package for Amlogic"
+	help
+		Fimware Image Package (FIP) sources used to sign Amlogic U-Boot binaries

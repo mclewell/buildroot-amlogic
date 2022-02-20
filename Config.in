@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_AMLOGIC_PATH/package/amlogic-boot-fip/Config.in.host"
