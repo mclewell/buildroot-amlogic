@@ -1,9 +1,18 @@
 config BR2_PACKAGE_HOST_AMLOGIC_BOOT_FIP
 	bool "host Firmware Image Package for Amlogic"
 	help
-		Fimware Image Package (FIP) sources used to sign Amlogic U-Boot binaries
+		Fimware Image Package (FIP) sources used to sign Amlogic U-Boot binaries.
+		The selected board folders will be copied to ${HOST_DIR}/share/fip. The
+		boot binary can then be assembled inside the post-image.sh
 
 if BR2_PACKAGE_HOST_AMLOGIC_BOOT_FIP
+
+
+config BR2_PACKAGE_HOST_AMLOGIC_BOOT_FIP_ODROIDC2
+	bool "Odroid-C2"
+
+config BR2_PACKAGE_HOST_AMLOGIC_BOOT_FIP_ODROIDC4
+	bool "Odroid-C4"
 
 config BR2_PACKAGE_HOST_AMLOGIC_BOOT_FIP_ODROIDHC4
 	bool "Odroid-HC4"

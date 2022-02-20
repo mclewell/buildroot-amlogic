@@ -58,7 +58,7 @@ ${FIP_DIR}/aml_encrypt_g12a --bl2sig \
 
 echo "Step8"
 ${FIP_DIR}/aml_encrypt_g12a --bootmk \
-	--output ${BINARIES_DIR}/boot0.bin \
+	--output ${TMP}/u-boot.bin \
 	--bl2 ${TMP}/bl2.n.bin.sig \
 	--bl30 ${TMP}/bl30_new.bin.enc \
 	--bl31 ${TMP}/bl31.img.enc \
@@ -74,6 +74,7 @@ ${FIP_DIR}/aml_encrypt_g12a --bootmk \
 	--ddrfw9 ${FIP_DIR}/lpddr3_1d.fw \
 	--level v3
 
+dd if=${TMP}/u-boot.bin.sd.bin of=${BINARIES_DIR}/boot0.bin conv=fsync,notrunc bs=512 skip=1 seek=1
 
 echo "Creating SD-Card image..."
 #cd ~-
