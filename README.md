@@ -22,12 +22,12 @@ Write the image to an SD-Card:
 dd if=images/sdcard.img of=/dev/sdX bs=1M status=progress && sync
 ```
 
-## Currently Supported/Test Boards:
-- Odroid-HC4 - Tested,working
+## Currently Supported/Tested Boards:
+- Odroid-HC4 - Tested, working
 - Odroid-N2+ - In-work
 
 ## Firmware Image Package (FIP):
-Amlogic CPUs require signed first-stage boot image. The various boot components,
+Amlogic CPUs require signed first-stage boot images. The various boot components,
 called the Firmware Image Package (FIP), can be built from 
 [Hardkernel's U-boot source](https://github.com/hardkernel/u-boot). The LibreELEC
 project has extracted these binaries and made them available in one of their
